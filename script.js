@@ -1,16 +1,8 @@
-var button = document.getElementById('button');
+document.addEventListener("DOMContentLoaded", function() {
+    const progressBars = document.querySelectorAll('.progress-bar');
 
-button.addEventListener('mouseenter', entrar);
-button.addEventListener('click', clicar);
-button.addEventListener('mouseout', sair);
-
-function clicar(){
-    button.style.background = 'red';
-}
-
-function entrar(){
-    button.style.background = 'black';
-}
-function sair(){
-    button.style.background = '#555'
-}
+    progressBars.forEach(bar => {
+        const progress = bar.getAttribute('data-progress');
+        bar.style.width = progress + '%';
+    });
+});

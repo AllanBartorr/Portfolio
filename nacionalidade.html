@@ -1,0 +1,59 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nacionalidade</title>
+    </head>
+    <body>
+        <h1>Verificar sua Nacionalidade
+        </h1>
+        Voce nasceu em qual país? <input type="text" name="text" id="txt">
+        <input id="button" type="button" value="Verificar" onclick="verificar()">
+        <div id="res">
+        </div>
+        <style>
+            body{
+            background: radial-gradient(circle, #a89d9a, #1b1b1b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            margin: 0;
+            flex-direction: column;
+            }
+            h1{
+                align-items: center;
+               background-color: rgba(36, 25, 4, 0.281); 
+               font-size: 28px;
+                text-align: center;
+                width: 25%;
+                margin: 2em;
+                border: solid;
+                border-radius: 10px;
+                
+            }
+            #button{
+                margin-top: 10px;
+                height:30px ;
+                background-color: greenyellow;
+                border: solid;
+            }
+            input{
+                margin-top: 5px;
+            }
+
+        </style>
+        <script>
+            function verificar(){
+                var text = window.document.querySelector('input.txt')
+                var pais = txt.value
+                    if (pais.toLowerCase() === 'brasil'){
+                    res.innerHTML = '<p>"Você é brasileiro"</p>'
+            } else {
+                res.innerHTML = '<p> Você não é brasileiro </p>'
+            }
+        }
+        </script>
+    </body>
+</html>
